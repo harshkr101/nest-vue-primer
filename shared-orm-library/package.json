@@ -6,8 +6,8 @@
   "scripts": {
     "build": "tsc",
     "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
-    "migration:generate": "npm run typeorm -- migration:generate -n",
-    "migration:run": "npm run typeorm -- migration:run"
+    "migration:generate": "npm run typeorm -- migration:generate src/migrations/migration  -d ./src/database/connection.ts",
+    "migration:run": "npm run typeorm -- migration:run -d ./src/database/connection.ts"
   },
   "keywords": [],
   "author": "",
